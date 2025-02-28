@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>MY Todo</title>
+</head>
+
+<body>
+  
+          
+           
+        
+    <div class="container my-3">
+        <h2>Update Your Todo</h2>
+        <form action="/update/{{ todo.sno }}" method="POST">
+            <div class="form-group">
+                <label for="title">Todo Title</label>
+                <input type="text" class="form-control" name="title" value="{{ todo.title }}" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="desc">Description</label>
+                <input type="text" class="form-control" name="desc" value="{{ todo.desc }}" id="desc" required>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Update</button>
+        </form>
+    </div>
+    
+
+</html>
